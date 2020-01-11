@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first landing page!</title>
+</head>
+<body>
+    <p>Привіт {{ name }}!</p>
+    <p>Сьогодні: {{ now|date:"H:i d M Y"  }}</p>
+    <h2>My dear students:</h2>
+    <ol>
+        {% for name in students %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ol>
+    <p>
+    {% if message %}
+    You've successfully performed your action with <strong>{{ message }}</strong>
+    {% else %}
+     Please, provide a GET param to your URL. Example: ?message=hello
+    {% endif %}
+    </p>
+</body>
+</html>
