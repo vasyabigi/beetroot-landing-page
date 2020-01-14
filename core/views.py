@@ -1,7 +1,7 @@
-from random import shuffle
 from datetime import datetime
 
 from django.shortcuts import render
+from core.forms import ContactUsForm
 
 
 def landing_page_view(request):
@@ -10,16 +10,26 @@ def landing_page_view(request):
     if message:
         pass
 
-    students = ["Serhii", "Andrii", "Bogdan", "Ira", "Alex", "Roman"]
-    shuffle(students)
-
     return render(
         request,
         "landing_page.html",
         context={
-            "name": "Vasyl",
+            "name": "Vasyl and team",
             "now": datetime.now(),
-            "students": students,
             "message": message,
         },
     )
+
+
+def contact_us_view(request):
+    if request.method == "POST":
+        form = ContactUsForm(request.POST)
+        if form.is_valid():
+            print("HAPPY U! FORM IS VALID!")
+            pass
+    else:
+        form = ContactUsForm()
+
+    return render(request, "contact_us.html", context={
+        "form": form
+    })
