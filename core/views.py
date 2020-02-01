@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from random import shuffle
 from django.shortcuts import render
 from core.forms import ContactUsForm
 
@@ -7,6 +7,9 @@ from core.forms import ContactUsForm
 def landing_page_view(request):
     message = request.GET.get("message")
 
+    people = ["Serhii", "Andrii", "Bogdan", "Ira", "Alex", "Roman"]
+    shuffle(people)
+    
     if message:
         pass
 
@@ -17,6 +20,7 @@ def landing_page_view(request):
             "name": "Vasyl and team",
             "now": datetime.now(),
             "message": message,
+            "people": people,
         },
     )
 
