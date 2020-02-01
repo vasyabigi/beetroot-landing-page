@@ -33,3 +33,6 @@ def contact_us_view(request):
     return render(request, "contact_us.html", context={
         "form": form
     })
+
+def terms_of_use(request):
+   return render(request, "terms-of-use.html", context = {"city": "Rivne", "birthday": "July"})
