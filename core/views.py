@@ -34,5 +34,10 @@ def contact_us_view(request):
         "form": form
     })
 
+
+def about_privacy_page_view(request):
+    return render(request, "about_privacy.html")
+
+
 def terms_of_use(request):
-   return render(request, "terms-of-use.html", context = {"city": "Rivne", "birthday": "July"})
+    return render(request, "terms-of-use.html", context={"city": "Rivne", "birthday": "July"})
