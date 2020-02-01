@@ -33,3 +33,7 @@ def contact_us_view(request):
     return render(request, "contact_us.html", context={
         "form": form
     })
+
+
+def privat_page_view(request):
+    return render(request, "privat.html")
