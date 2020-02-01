@@ -26,7 +26,7 @@ SECRET_KEY = '+4%fjs!=c5ej+=y5tr*bb-^^hao99ck-@bx*h62j+algs^^*5h'
 DEBUG = True
 
 ALLOWED_HOSTS = ["landing-dev.empsrtxdpp.eu-central-1.elasticbeanstalk.com",
-                 "localhost"]
+                 "localhost", "127.0.0.1"]
 
 
 # Application definition
