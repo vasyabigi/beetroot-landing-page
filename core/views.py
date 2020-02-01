@@ -35,5 +35,5 @@ def contact_us_view(request):
     })
 
 
-def privat_page_view(request):
-    return render(request, "privat.html")
+def about_privacy_page_view(request):
+    return render(request, "about_privacy.html")
