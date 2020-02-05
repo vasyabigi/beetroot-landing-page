@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block html_title %}
+	Our Terms of use
+{% endblock html_title %}
+
+
+{% block content %}
     <p>City - {{city}}</p>
-</body>
-</html>
+    
+{% endblock content %}
